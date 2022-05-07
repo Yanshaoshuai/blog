@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on Shao-shuai Yan&#39;s Site</title>
-    <link>https://yanshaoshuai.github.io/blog/categories/hugo/</link>
+    <link>https://yanshaoshuai.github.io/categories/hugo/</link>
     <description>Recent content in hugo on Shao-shuai Yan&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yanshaoshuai.github.io/blog/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yanshaoshuai.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HUGO</title>
-      <link>https://yanshaoshuai.github.io/blog/posts/usage/</link>
+      <link>https://yanshaoshuai.github.io/posts/usage/</link>
       <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yanshaoshuai.github.io/blog/posts/usage/</guid>
+      <guid>https://yanshaoshuai.github.io/posts/usage/</guid>
       <description>header  title: &amp;ldquo;usage of hugo&amp;rdquo; &amp;ndash;标题
 description &amp;ndash; 描述
 date: 2022-05-07 &amp;ndash;日期
@@ -24,10 +24,10 @@ menu: main &amp;ndash; 是否在menu显示
     
     <item>
       <title>Related</title>
-      <link>https://yanshaoshuai.github.io/blog/posts/related/</link>
+      <link>https://yanshaoshuai.github.io/posts/related/</link>
       <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yanshaoshuai.github.io/blog/posts/related/</guid>
+      <guid>https://yanshaoshuai.github.io/posts/related/</guid>
       <description>哈哈哈 </description>
     </item>
     

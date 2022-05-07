@@ -1,4 +1,4 @@
-baseURL = 'https://yanshaoshuai.github.io/blog/'
+baseURL = 'https://yanshaoshuai.github.io/'
 languageCode = 'en-us'
 title = "Shao-shuai Yan's Site"
 theme = "binario"
