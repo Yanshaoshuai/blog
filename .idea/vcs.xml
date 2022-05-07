@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my-blog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/themes/binario" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/themes/hugo-theme-iris" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/themes/zen" vcs="Git" />
+  </component>
+</project>
