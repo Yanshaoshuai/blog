@@ -6,7 +6,6 @@ tags:
 - "hugo"
 categories:
 - "hugo"
-menu: main
 ---
 
 ### 哈哈哈

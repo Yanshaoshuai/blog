@@ -8,7 +8,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 publishDir = "docs"
 [Author] # Used in authorbox
   name = "Shao-shuai Yan"
-  bio = "A freedom developers"
+  bio = "ahutyss@gmail.com"
   avatar = "img/github-photo.jpg"
 [Params]
   description = "Responsive card-based & code-light Hugo theme" # Site Description. Used in meta description

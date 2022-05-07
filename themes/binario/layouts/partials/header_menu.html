@@ -8,20 +8,40 @@
 			</svg>
 		</div>
 	</button>
-	<ul id="menu" class="main-nav__list">
-		{{- $currentNode := . }}
-		{{- range .Site.Menus.main }}
+<!--	<ul id="menu" class="main-nav__list">-->
+<!--		{{- $currentNode := . }}-->
+<!--		{{- range .Site.Menus.main }}-->
+<!--			{{- $current := (or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)) }}-->
+<!--			{{- if .Name }}-->
+<!--			<li class="main-nav__item{{ if $current }} main-nav__item&#45;&#45;active{{ end }}">-->
+<!--				{{ if not $current }}<a class="main-nav__link" href="{{ .URL }}">{{ end }}-->
+<!--					{{ .Pre }}-->
+<!--					<span class="main-nav__text">{{ .Name }}</span>-->
+<!--					{{ .Post }}-->
+<!--				{{ if not $current }}</a>{{ end }}-->
+<!--			</li>-->
+<!--			{{- end }}-->
+<!--		{{- end }}-->
+<!--	</ul>-->
+		<ul id="menu" class="main-nav__list">
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/tags">
+					<span class="main-nav__text">TAGS</span>
+				</a>
+			</li>
+			{{- $currentNode := . }}
+			{{- range .Site.Menus.main }}
 			{{- $current := (or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)) }}
 			{{- if .Name }}
 			<li class="main-nav__item{{ if $current }} main-nav__item--active{{ end }}">
 				{{ if not $current }}<a class="main-nav__link" href="{{ .URL }}">{{ end }}
-					{{ .Pre }}
-					<span class="main-nav__text">{{ .Name }}</span>
-					{{ .Post }}
+				{{ .Pre }}
+				<span class="main-nav__text">{{ .Name }}</span>
+				{{ .Post }}
 				{{ if not $current }}</a>{{ end }}
 			</li>
 			{{- end }}
-		{{- end }}
-	</ul>
+			{{- end }}
+		</ul>
 </nav>
 {{- end }}
