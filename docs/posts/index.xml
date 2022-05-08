@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 闫绍帅的博客</title>
+    <link>https://yanshaoshuai.github.io/posts/</link>
+    <description>Recent content in Posts on 闫绍帅的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yanshaoshuai.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HUGO</title>
+      <link>https://yanshaoshuai.github.io/posts/hugo/usage/</link>
+      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanshaoshuai.github.io/posts/hugo/usage/</guid>
+      <description>header  title: &amp;ldquo;usage of hugo&amp;rdquo; &amp;ndash;标题
+description &amp;ndash; 描述
+date: 2022-05-07 &amp;ndash;日期
+tags &amp;ndash; 标签
+categories &amp;ndash; 目录
+menu: main &amp;ndash; 是否在menu显示
+ </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://yanshaoshuai.github.io/posts/yan/</link>
+      <pubDate>Sat, 08 May 1999 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanshaoshuai.github.io/posts/yan/</guid>
+      <description>邮箱  ahutyss@gmail.com
+ Github Click Here
+公众号 </description>
+    </item>
+    
+  </channel>
+</rss>
