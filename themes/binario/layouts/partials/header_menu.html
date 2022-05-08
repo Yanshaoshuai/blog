@@ -34,6 +34,11 @@
 					<span class="main-nav__text">Github</span>
 				</a>
 			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/posts/yan/">
+					<span class="main-nav__text">Contact</span>
+				</a>
+			</li>
 			{{- $currentNode := . }}
 			{{- range .Site.Menus.main }}
 			{{- $current := (or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)) }}

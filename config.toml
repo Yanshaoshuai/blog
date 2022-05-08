@@ -1,9 +1,9 @@
 baseURL = 'https://yanshaoshuai.github.io/'
 languageCode = 'en-us'
-title = "Shaoshuai Yan's Site"
+title = "闫绍帅的博客"
 theme = "binario"
 paginate = "9" # Number of elements per page in pagination
-disqusShortname = "" # Enable comments by entering your Disqus shortname
+# disqusShortname = "https-yanshaoshuai-github-io" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 publishDir = "docs"
 [Author] # Used in authorbox
