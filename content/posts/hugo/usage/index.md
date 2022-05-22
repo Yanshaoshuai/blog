@@ -4,7 +4,6 @@ description: hugo markdown 使用技巧
 date: 2022-05-07
 tags:
 - "hugo"
-- "hugo"
 menu: main
 ---
 <!--more-->
