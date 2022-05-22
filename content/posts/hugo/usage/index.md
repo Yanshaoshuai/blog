@@ -7,7 +7,7 @@ tags:
 - "hugo"
 menu: main
 ---
-
+<!--more-->
 ## header
 > title: "usage of hugo" --标题
 > 

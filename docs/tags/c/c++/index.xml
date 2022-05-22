@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C/C&#43;&#43; on 闫绍帅的博客</title>
+    <link>https://yanshaoshuai.github.io/tags/c/c&#43;&#43;/</link>
+    <description>Recent content in C/C&#43;&#43; on 闫绍帅的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://yanshaoshuai.github.io/tags/c/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux C 基础(一) 不包含指针部分</title>
+      <link>https://yanshaoshuai.github.io/posts/cpp/base_np/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanshaoshuai.github.io/posts/cpp/base_np/</guid>
+      <description>&lt;hr&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
