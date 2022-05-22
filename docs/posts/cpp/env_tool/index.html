@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#076b20">
+	<title>Linux C 基础(三) 工具和环境 | 闫绍帅的博客</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Linux C 基础(三) 工具和环境">
+		<meta property="og:title" content="Linux C 基础(三) 工具和环境" />
+<meta property="og:description" content="Linux C 基础(三) 工具和环境" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yanshaoshuai.github.io/posts/cpp/env_tool/" /><meta property="og:image" content="https://yanshaoshuai.github.io/posts/cpp/env_tool/featured.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-22T00:00:00+00:00" />
+
+
+		<meta itemprop="name" content="Linux C 基础(三) 工具和环境">
+<meta itemprop="description" content="Linux C 基础(三) 工具和环境"><meta itemprop="datePublished" content="2022-05-22T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-05-22T00:00:00+00:00" />
+<meta itemprop="wordCount" content="376"><meta itemprop="image" content="https://yanshaoshuai.github.io/posts/cpp/env_tool/featured.jpg">
+<meta itemprop="keywords" content="C/C&#43;&#43;," />
+		<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://yanshaoshuai.github.io/posts/cpp/env_tool/featured.jpg"/>
+<meta name="twitter:title" content="Linux C 基础(三) 工具和环境"/>
+<meta name="twitter:description" content="Linux C 基础(三) 工具和环境"/>
+
+	<link rel="stylesheet" href="/css/bundle.css">
+	<link rel="stylesheet" href="/css/themes/dark-violet.css">
+	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
+	<link rel="manifest" href="/manifest.json">
+		
+</head>
+<body class="body kind-page">
+	<header class="header">
+	<a class="logo" href="/">闫绍帅的博客</a>
+	
+<nav class="main-nav main-nav--right" role="navigation">
+	<button id="toggle" class="main-nav__btn" aria-label="Menu toggle" aria-expanded="false" tabindex="0">
+		<div class="main-nav__btn-box" tabindex="-1">
+			<svg class="main-nav__icon icon-menu" width="18" height="18" viewBox="0 0 18 18">
+				<path class="icon-menu__burger" d="M18 0v3.6H0V0h18zM0 10.8h18V7.2H0v3.6zM0 18h18v-3.6H0V18z"/>
+				<path class="icon-menu__x" d="M11.55 9L18 15.45 15.45 18 9 11.55 2.55 18 0 15.45 6.45 9 0 2.55 2.55 0 9 6.45 15.45 0 18 2.55 11.55 9z"/>
+			</svg>
+		</div>
+	</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<ul id="menu" class="main-nav__list">
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/posts/yan/">
+					<span class="main-nav__text">Contact</span>
+				</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/tags">
+					<span class="main-nav__text">Tags</span>
+				</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="https://github.com/Yanshaoshuai">
+					<span class="main-nav__text">Github</span>
+				</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/posts/hugo/usage/">
+				
+				<span class="main-nav__text">HUGO</span>
+				
+				</a>
+			</li>
+		</ul>
+</nav>
+</header>
+	<div class="primary">
+	
+	<main class="main">
+		
+<nav class="breadcrumb block" aria-label="breadcrumb">
+	<ol class="breadcrumb__list">
+		
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/">HOME</a>
+		</li>
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/posts/">Posts</a>
+		</li>
+		<li class="breadcrumbs__item breadcrumb__item--active" aria-current="page">Linux C 基础(三) 工具和环境</li>
+	</ol>
+</nav>
+		<div class="single block">
+			<article class="entry">
+		<figure class="entry__featured featured">
+				<img class="featured__img" src="/posts/cpp/env_tool/featured.jpg" alt="featured.jpg"/>
+		</figure>
+	<div class="entry__meta meta mb">
+	<time class="entry__meta-published meta-published" datetime="2022-05-22T00:00:00Z">May 22, 2022</time>
+<div class="entry__meta-tags meta-tags">
+	<span class="meta-tags__list">Tags:
+		<a class="meta-tags__link" href="/tags/c/c&#43;&#43;/" rel="tag">C/C&#43;&#43;</a>
+	</span>
+</div>
+	</div>
+				<h1 class="entry__title">Linux C 基础(三) 工具和环境</h1>
+<details class="entry__toc toc" open>
+	<summary class="toc__title">Table of Contents</summary>
+	<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#安装编译工具">安装编译工具</a></li>
+        <li><a href="#安装cmake">安装CMake</a></li>
+        <li><a href="#安装-ninja">安装 Ninja</a></li>
+        <li><a href="#安装gdb">安装GDB</a></li>
+        <li><a href="#安装配置vscode">安装配置VSCode</a></li>
+        <li><a href="#最终文件结构">最终文件结构</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</details>
+				<div class="entry__content"><h3 id="安装编译工具">安装编译工具</h3>
+<p>输入gcc -v和g++ -v查看有没有安装C/C++编译工具，没有的话按照提示安装一下。</p>
+<h3 id="安装cmake">安装CMake</h3>
+<p>到<a href="">cmake官网</a>找到你的机器支持的包,下载压缩包,或者使用如下命令下载:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>wget https://github.com/Kitware/CMake/releases/download/v3.22.4/cmake-3.22.4-linux-x86_64.tar.gz
+</span></span><span style="display:flex;"><span>tar -xzvf cmake-3.22.4-linux-x86_64.tar.gz
+</span></span></code></pre></div><p>把cmake配置到环境变量:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>vim /etc/profile
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 在最后加如下语句</span>
+</span></span><span style="display:flex;"><span>export PATH<span style="color:#f92672">=</span>/opt/cmake-3.22.4-linux-x86_64/bin:$PATH
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#保存退出后 source一下</span>
+</span></span><span style="display:flex;"><span>source /etc/profile
+</span></span></code></pre></div><p>输入cmake &ndash;version检查是否配置成功。</p>
+<h3 id="安装-ninja">安装 Ninja</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>apt-get install -y ninja-build
+</span></span></code></pre></div><h3 id="安装gdb">安装GDB</h3>
+<p>输入gdb -v检查是否已经安装gdb，如果没有按照提示安装一下即可。</p>
+<h3 id="安装配置vscode">安装配置VSCode</h3>
+<p>到VSCode官网下载dep包，指向如下命令安装:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>dpkg -i code_1.67.2-1652812855_amd64.deb
+</span></span></code></pre></div><p>下载如下插件:</p>
+<p>1.C/C++</p>
+<p>2.CMake</p>
+<p>其它不是必须的。</p>
+<p><strong>项目运行配置</strong></p>
+<p><code>CMake项目为例</code></p>
+<blockquote>
+<p>注意VSCode启动项目的顺序是先找到launch.json下的配置项,然后根据其preLaunchTask字段值去tasks.json下面找要执行的task，所以要创建launch.json和tasks.json,然后把要运行的task的label字段复制到launch.json的对应配置项的preLaunchTask字段中。</p>
+</blockquote>
+<blockquote>
+<p>F5启动时顺序:</p>
+<p>=&gt;根据launch.json中的preLaunchTask找到tasks中的task</p>
+<p>=&gt;按照task中定义的dependsOrder执行dependsOn中依赖的task生成可执行文件</p>
+<p>=&gt;启动GDB调试程序调试进行调试(Debug版本)</p>
+</blockquote>
+<ol>
+<li>在.vscode文件夹下建立tasks.json，内容如下:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// See https://go.microsoft.com/fwlink/?LinkId=733558
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// for the documentation about the tasks.json format
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;2.0.0&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;options&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;cwd&#34;</span>: <span style="color:#e6db74">&#34;${workspaceFolder}/build&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;tasks&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;shell&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;delete-old-build&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;clear &amp;&amp; rm -rf  ${workspaceFolder}/build/*&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;args&#34;</span>: []
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;shell&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;cmake-make&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;cmake&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;args&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;..&#34;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;make&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;args&#34;</span>: [],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;group&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;kind&#34;</span>: <span style="color:#e6db74">&#34;build&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;isDefault&#34;</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;make&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;shell&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;cmake-ninja&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;cmake&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;args&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;-G&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Ninja&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;..&#34;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;ninja&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;args&#34;</span>: [],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;group&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;kind&#34;</span>: <span style="color:#e6db74">&#34;build&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;isDefault&#34;</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;ninja&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;Build-make&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;dependsOrder&#34;</span>: <span style="color:#e6db74">&#34;sequence&#34;</span>, <span style="color:#75715e">//按列出的顺序输出依赖项
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#f92672">&#34;dependsOn&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;delete-old-build&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;cmake-make&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;make&#34;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;Build-ninja&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;dependsOrder&#34;</span>: <span style="color:#e6db74">&#34;sequence&#34;</span>, <span style="color:#75715e">//按列出的顺序输出依赖项
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#f92672">&#34;dependsOn&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;delete-old-build&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;cmake-ninja&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;ninja&#34;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="2">
+<li>在.vscode文件夹下建立launch.json，内容如下:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Use IntelliSense to learn about possible attributes.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// Hover to view descriptions of existing attributes.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.2.0&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;configurations&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;gdb debug&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;cppdbg&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;request&#34;</span>: <span style="color:#e6db74">&#34;launch&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;program&#34;</span>: <span style="color:#e6db74">&#34;${workspaceFolder}/build/TEST_C_MAIN&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;args&#34;</span>: [],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;stopAtEntry&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cwd&#34;</span>: <span style="color:#e6db74">&#34;${workspaceFolder}&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;environment&#34;</span>: [],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;externalConsole&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;MIMode&#34;</span>: <span style="color:#e6db74">&#34;gdb&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;setupCommands&#34;</span>: [
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;为 gdb 启用整齐打印&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;-enable-pretty-printing&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;ignoreFailures&#34;</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;targetArchitecture&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;preLaunchTask&#34;</span> :<span style="color:#e6db74">&#34;Build-make&#34;</span>,<span style="color:#75715e">//指定task名称
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#f92672">&#34;miDebuggerPath&#34;</span>: <span style="color:#e6db74">&#34;/usr/bin/gdb&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>我这里配置了两种install方式,make和ninja,需要修改intall方式只需修改preLaunchTask名字即可。</p>
+<h3 id="最终文件结构">最终文件结构</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@yan-virtual-machine:/home/yan/code/c/CPP_DEMO# tree
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├── build
+</span></span><span style="display:flex;"><span>├── c_cpp_mix
+</span></span><span style="display:flex;"><span>│   ├── run_c.c
+</span></span><span style="display:flex;"><span>│   ├── run_cpp.cpp
+</span></span><span style="display:flex;"><span>│   ├── test_mix_cpp.c
+</span></span><span style="display:flex;"><span>│   ├── test_mix_cpp.cpp
+</span></span><span style="display:flex;"><span>│   └── test_mix_cpp.h
+</span></span><span style="display:flex;"><span>├── CMakeLists.txt
+</span></span><span style="display:flex;"><span>├── README.md
+</span></span><span style="display:flex;"><span>├── run_app.c
+</span></span><span style="display:flex;"><span>└── test_c
+</span></span><span style="display:flex;"><span>    ├── c_base_no_ptr.c
+</span></span><span style="display:flex;"><span>    ├── c_base_no_ptr.h
+</span></span><span style="display:flex;"><span>    ├── extra_func.c
+</span></span><span style="display:flex;"><span>    ├── file
+</span></span><span style="display:flex;"><span>    │   ├── test_read.txt
+</span></span><span style="display:flex;"><span>    │   ├── test_write2.txt
+</span></span><span style="display:flex;"><span>    │   └── test_write.txt
+</span></span><span style="display:flex;"><span>    ├── keyword_test.c
+</span></span><span style="display:flex;"><span>    ├── test_base.c
+</span></span><span style="display:flex;"><span>    ├── test_dive.c
+</span></span><span style="display:flex;"><span>    ├── test_file.c
+</span></span><span style="display:flex;"><span>    └── test.h
+</span></span></code></pre></div><p>最后贴上我的CMakeLists.txt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>cmake_minimum_required(<span style="color:#e6db74">VERSION</span> <span style="color:#e6db74">3.21</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>project(<span style="color:#e6db74">CPP_DEMO</span> <span style="color:#e6db74">C</span> <span style="color:#e6db74">CXX</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>set(<span style="color:#e6db74">CMAKE_CXX_STANDARD</span> <span style="color:#e6db74">11</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>set(<span style="color:#e6db74">CMAKE_C_STANDARD</span> <span style="color:#e6db74">11</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># 设置启动参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#set(CMAKE_CXX_FLAGS &#34;${CMAKE_CXX_FLAGS} -Wall&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>set(<span style="color:#e6db74">CMAKE_CXX_FLAGS</span> <span style="color:#e6db74">&#34;${CMAKE_CXX_FLAGS} -O3 -Fno-toplevel-reorder&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># 设置编译类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>set(<span style="color:#e6db74">CMAKE_BUILD_TYPE</span>    <span style="color:#e6db74">Debug</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Release类型无法调试
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># set(CMAKE_BUILD_TYPE    Release)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#忽略警告
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>add_definitions(<span style="color:#e6db74">-w</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Add header file include directories
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>include_directories(<span style="color:#e6db74">./test_c</span> <span style="color:#e6db74">./c_cpp_mix</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># 设置编译包含的文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>file(<span style="color:#e6db74">GLOB_RECURSE</span> <span style="color:#e6db74">TEST_C</span> <span style="color:#e6db74">&#34;test_c/*.c&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>file(<span style="color:#e6db74">GLOB_RECURSE</span> <span style="color:#e6db74">MIX_C_CALL_CPP_FILE</span>  <span style="color:#e6db74">&#34;c_cpp_mix/*.c&#34;</span> <span style="color:#e6db74">&#34;c_cpp_mix/*.cpp&#34;</span> <span style="color:#e6db74">EXCEPT</span> <span style="color:#e6db74">&#34;c_cpp_mix/run_cpp.cpp&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>file(<span style="color:#e6db74">GLOB_RECURSE</span> <span style="color:#e6db74">MIX_CPP_CALL_C_FILE</span>  <span style="color:#e6db74">&#34;c_cpp_mix/*.c&#34;</span> <span style="color:#e6db74">&#34;c_cpp_mix/*.cpp&#34;</span> <span style="color:#e6db74">EXCEPT</span> <span style="color:#e6db74">&#34;c_cpp_mix/run_c.c&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># 混合编程 排除c++ main() 所在文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>list(<span style="color:#e6db74">REMOVE_ITEM</span>  <span style="color:#e6db74">MIX_C_CALL_CPP_FILE</span> <span style="color:#e6db74">&#34;${CMAKE_CURRENT_SOURCE_DIR}/c_cpp_mix/run_cpp.cpp&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>message(<span style="color:#e6db74">********</span> <span style="color:#e6db74">MIX_C_CALL_CPP_FILE</span> <span style="color:#e6db74">exclude</span> <span style="color:#e6db74">==&gt;</span> <span style="color:#e6db74">&#34;${CMAKE_CURRENT_SOURCE_DIR}/c_cpp_mix/run_cpp.cpp&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># 排除c main() 所在文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>list(<span style="color:#e6db74">REMOVE_ITEM</span>  <span style="color:#e6db74">MIX_CPP_CALL_C_FILE</span> <span style="color:#e6db74">&#34;${CMAKE_CURRENT_SOURCE_DIR}/c_cpp_mix/run_c.c&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>message(<span style="color:#e6db74">********</span> <span style="color:#e6db74">MIX_CPP_CALL_C_FILE</span> <span style="color:#e6db74">exclude</span> <span style="color:#e6db74">==&gt;</span> <span style="color:#e6db74">&#34;${CMAKE_CURRENT_SOURCE_DIR}/c_cpp_mix/run_c.c&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>message(<span style="color:#e6db74">********</span> <span style="color:#e6db74">MIX_C_CALL_CPP_FILE</span> <span style="color:#f92672">${</span>MIX_C_CALL_CPP_FILE<span style="color:#f92672">}</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>message(<span style="color:#e6db74">********</span> <span style="color:#e6db74">MIX_CPP_CALL_C_FILE</span> <span style="color:#f92672">${</span>MIX_CPP_CALL_C_FILE<span style="color:#f92672">}</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>add_executable(<span style="color:#e6db74">TEST_C_MAIN</span>  <span style="color:#e6db74">run_app.c</span> <span style="color:#f92672">${</span>TEST_C<span style="color:#f92672">}</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>add_executable(<span style="color:#e6db74">MIX_C_CALL_CPP</span>   <span style="color:#e6db74">c_cpp_mix/run_c.c</span> <span style="color:#f92672">${</span>MIX_C_CALL_CPP_FILE<span style="color:#f92672">}</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>add_executable(<span style="color:#e6db74">MIX_CPP_CALL_C</span>   <span style="color:#e6db74">c_cpp_mix/run_cpp.cpp</span> <span style="color:#f92672">${</span>MIX_CPP_CALL_C_FILE<span style="color:#f92672">}</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p><a href="https://github.com/Yanshaoshuai/CPP_DEMO">项目地址</a></p></div>
+				
+				<footer class="entry__footer">
+					
+<div class="entry__tags">
+			<a class="entry__tag btn" href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+</div>
+					
+<div class="entry__share share">
+	<a class="share__link btn" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyanshaoshuai.github.io%2fposts%2fcpp%2fenv_tool%2f" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Share on Facebook', 'width=800,height=600,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Facebook" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M330 512V322h64l9-74h-73v-47c0-22 6-36 37-36h39V99c-7-1-30-3-57-3-57 0-95 34-95 98v54h-64v74h64v190z"/></svg>
+	</a>
+	<a class="share__link btn" title="Share on Twitter" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fyanshaoshuai.github.io%2fposts%2fcpp%2fenv_tool%2f&amp;text=Linux%20C%20%e5%9f%ba%e7%a1%80%28%e4%b8%89%29%20%e5%b7%a5%e5%85%b7%e5%92%8c%e7%8e%af%e5%a2%83" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Share on Twitter', 'width=800,height=450,resizable=yes,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Twitter" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+	</a>
+	<a class="share__link btn" title="Share on Reddit" href="https://www.reddit.com/submit?url=https%3a%2f%2fyanshaoshuai.github.io%2fposts%2fcpp%2fenv_tool%2f&amp;title=Linux%20C%20%e5%9f%ba%e7%a1%80%28%e4%b8%89%29%20%e5%b7%a5%e5%85%b7%e5%92%8c%e7%8e%af%e5%a2%83" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Share on Reddit', 'width=832,height=624,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Reddit" role="img" width="32" height="32" viewBox="0 0 512 512"><path fill-rule="evenodd" d="M375 146a32 32 0 1 0-29-46l-65-13c-5-1-9 2-10 6l-22 97c-45 1-85 15-113 36a42 42 0 1 0-45 69l-1 12c0 65 74 117 166 117s166-52 166-117l-1-11a42 42 0 1 0-44-69c-28-21-67-35-111-37l19-86 58 13a32 32 0 0 0 32 29zM190 353c2-1 4 0 5 1 15 11 38 18 61 18s46-6 61-18a7 7 0 0 1 8 10c-18 14-44 21-69 21-25-1-51-7-69-21a6 6 0 0 1 3-11zm23-44a31 31 0 1 1-44-44 31 31 0 0 1 44 44zm130 0a31 31 0 1 0-44-44 31 31 0 0 0 44 44z"/></svg>
+	</a>
+	<a class="share__link btn" title="Share on Telegram" href="https://t.me/share/url?url=https%3a%2f%2fyanshaoshuai.github.io%2fposts%2fcpp%2fenv_tool%2f&amp;title=Linux%20C%20%e5%9f%ba%e7%a1%80%28%e4%b8%89%29%20%e5%b7%a5%e5%85%b7%e5%92%8c%e7%8e%af%e5%a2%83" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Share on Telegram', 'width=800,height=600,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Telegram" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M199 404c-11 0-10-4-13-14l-32-105 245-144"/><path d="M199 404c7 0 11-4 16-8l45-43-56-34"/><path d="M204 319l135 99c14 9 26 4 30-14l55-258c5-22-9-32-24-25L79 245c-21 8-21 21-4 26l83 26 190-121c9-5 17-3 11 4"/></svg>
+	</a>
+	<a class="share__link btn" title="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fyanshaoshuai.github.io%2fposts%2fcpp%2fenv_tool%2f&title=Linux%20C%20%e5%9f%ba%e7%a1%80%28%e4%b8%89%29%20%e5%b7%a5%e5%85%b7%e5%92%8c%e7%8e%af%e5%a2%83" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Share on LinkedIn', 'width=640,height=480,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="LinkedIn" role="img" width="32" height="32" viewBox="0 0 512 512"><circle cx="142" cy="138" r="37"/><path stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+	</a>
+	<a class="share__link btn" title="Share on VK" href="https://vk.com/share.php?url=https%3a%2f%2fyanshaoshuai.github.io%2fposts%2fcpp%2fenv_tool%2f" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Share on VK', 'width=640,height=480,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="VK" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M274 363c5-1 14-3 14-15 0 0-1-30 13-34s32 29 51 42c14 9 25 8 25 8l51-1s26-2 14-23c-1-2-9-15-39-42-31-30-26-25 11-76 23-31 33-50 30-57-4-7-20-6-20-6h-57c-6 0-9 1-12 6 0 0-9 25-21 45-25 43-35 45-40 42-9-5-7-24-7-37 0-45 7-61-13-65-13-2-59-4-73 3-7 4-11 11-8 12 3 0 12 1 17 7 8 13 9 75-2 81-15 11-53-62-62-86-2-6-5-7-12-9H79c-6 0-15 1-11 13 27 56 83 193 184 192z"/></svg>
+	</a>
+	<a class="share__link btn" title="Save to Pocket" href="https://getpocket.com/edit?url=https%3a%2f%2fyanshaoshuai.github.io%2fposts%2fcpp%2fenv_tool%2f&amp;title=Linux%20C%20%e5%9f%ba%e7%a1%80%28%e4%b8%89%29%20%e5%b7%a5%e5%85%b7%e5%92%8c%e7%8e%af%e5%a2%83" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Save to Pocket', 'width=480,height=320,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Pocket" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M388.8 88.9H123.2A47.4 47.4 0 0 0 76 136.5v131.9c0 2.4.2 4.8.5 7.2a101.8 101.8 0 0 0-.5 10.6c0 75.6 80.6 137 180 137s180-61.4 180-137c0-3.6-.2-7.1-.5-10.6.3-2.4.5-4.8.5-7.2v-132A47.4 47.4 0 0 0 388.8 89zm-22.4 132.6l-93 93c-4.7 4.6-11 7-17.1 7a23.8 23.8 0 0 1-17.7-7l-93-93a24 24 0 0 1 33.8-33.8l76.6 76.5 76.6-76.5a24 24 0 0 1 33.8 33.8z"/></svg>
+	</a>
+	<a class="share__link btn" title="Save to Pinterest" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fyanshaoshuai.github.io%2fposts%2fcpp%2fenv_tool%2f&description=Linux%20C%20%e5%9f%ba%e7%a1%80%28%e4%b8%89%29%20%e5%b7%a5%e5%85%b7%e5%92%8c%e7%8e%af%e5%a2%83" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Save to Pocket', 'width=800,height=720,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Pinterest" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="m265 65c-104 0-157 75-157 138 0 37 14 71 45 83 5 2 10 0 12-5l3-18c2-6 1-7-2-12-9-11-15-24-15-43 0-56 41-106 108-106 60 0 92 37 92 85 0 64-28 116-70 116-23 0-40-18-34-42 6-27 19-57 19-77 0-18-9-34-30-34-24 0-42 25-42 58 0 20 7 34 7 34l-29 120a249 249 0 0 0 2 86l3-1c2-3 31-37 40-72l16-61c7 15 29 28 53 28 71 0 119-64 119-151 0-66-56-126-140-126z"/></svg>
+	</a>
+</div>
+				</footer>
+				
+			</article>
+		</div>
+	</main>
+	
+<div class="authorbox block">
+	<div class="author">
+		<figure class="author__avatar">
+			<img class="author__img" alt="Shaoshuai Yan avatar" src="/img/github-photo.jpg" height="90" width="90">
+		</figure>
+		<div class="author__body">
+			<div class="author__name">
+				Shaoshuai Yan
+			</div>
+			<div class="author__bio">Full Stack Developer</div>
+		</div>
+	</div>
+</div>
+	
+
+
+<div class="related block">
+	<h3 class="related__title">Related</h3>
+	<ul class="related__list">
+		
+		<li class="related__item"><a class="related__link" href="/posts/cpp/base_np/">Linux C 基础(一) 不包含指针部分</a></li>
+		
+	</ul>
+</div>
+
+	
+
+	</div>
+	<footer class="footer">
+<div class="footer__social social">
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="mailto:ahutyss@gmail.com">
+			<svg class="social__icon" aria-label="Email" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M299 268l124 106c-4 4-10 7-17 7H106c-7 0-13-3-17-7l124-106 43 38 43-38zm-43 13L89 138c4-4 10-7 17-7h300c7 0 13 3 17 7L256 281zm54-23l121-105v208L310 258zM81 153l121 105L81 361V153z"/></svg>
+		</a>
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://github.com/Yanshaoshuai">
+			<svg class="social__icon" aria-label="Github" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+		</a>
+</div>
+	<div class="footer__copyright">© 2022 Binario. <span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> theme.</span></div>
+</footer>
+<script src="/js/menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+
+</body>
+</html>
