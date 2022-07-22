@@ -19,6 +19,12 @@ menu: main
 > categories -- 目录
 > 
 > menu: main -- 是否在menu显示
+## 常用命令
+生成html
+> hugo 
+
+启动server
+> hugo server
 
 
 
